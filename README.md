@@ -8,6 +8,12 @@
 # install dependencies
 npm install
 
+# if babel-polyfill can't find
+npm install babel-polyfill --save
+
+# if you want get/post the server_address
+npm install --save vue-axios
+
 # serve with hot reload at localhost:8080
 npm run dev
 
