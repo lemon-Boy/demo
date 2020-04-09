@@ -10,11 +10,12 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    // 跨域设置
     proxyTable: {
+      // 跨域配置
       '/api/**': {
-        target: '', // 这个是你要代理的地址(开发阶段接口地址)
-        changeOrigin: true,//跨域需要加上这个
+        target: '', // 调用的接口域名和端口号（ex:http://10.5.0.40:8081/）
+        changeOrigin: true,//是否跨域
+        // secure: true, // 允许https请求
         pathRewrite: {
           '^/api': '/' //这里的/其实就是代表根,可以理解为用/api代表target里的地址
         }
